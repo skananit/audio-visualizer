@@ -2,8 +2,10 @@
   "name": "roar-web",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://shimakanani.com/audio-visualizer",
   "dependencies": {
     "axios": "^0.18.0",
+    "gh-pages": "^2.0.1",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
@@ -20,12 +22,13 @@
     "start": "HTTPS=true react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.8.2",
     "redux-testkit": "^1.0.6"
-  },
-  "proxy": "https://localhost:3001"
+  }
 }
